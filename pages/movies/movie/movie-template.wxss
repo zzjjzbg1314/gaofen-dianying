@@ -1,0 +1,57 @@
+@import "../stars/stars-template.wxss";
+
+.movie-container {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 5rpx 16rpx;
+}
+
+.pic {
+  color: #bbb;
+  float: left;
+  padding-right: 18rpx;
+}
+
+.em {
+  float: left;
+  padding: 0 10rpx;
+  color: #bbb;
+  font: 18rpx/150% Arial, Helvetica, sans-serif;
+}
+
+.pic .img {
+  width: 150rpx;
+  height: 225rpx;
+  padding-bottom: 20rpx;
+  padding-right: 25rpx;
+}
+
+.info {
+  height: 280rpx;
+  display: flex;
+  flex-flow: row;
+  background-color: #fff;
+  border-bottom: 1px dashed #ccc;
+  padding: 6rpx 0;
+}
+
+.title {
+  font: 30rpx/150% Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*white-space: nowrap;*/
+  font-size: 24rpx;
+}
+
+.quote {
+  margin: 20rpx 10rpx;
+}
+.quote .inq {
+  color: #666;
+}
+
+.right_info {
+  margin: 6rpx 0;
+  padding:6rpx 0;
+  color: #666;
+}

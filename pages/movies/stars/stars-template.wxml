@@ -1,0 +1,11 @@
+<template name="starsTemplate">
+  <view class="stars-container">
+    评分:
+    <view class="stars">
+      <block wx:for="{{stars}}" wx:for-item="i" wx:key="index">
+        <image  src="/images/icon/star.png"></image>
+      </block>
+    </view>
+    <text class="star-score">{{db_score}}</text>
+  </view>
+</template>

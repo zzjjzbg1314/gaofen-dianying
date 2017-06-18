@@ -1,0 +1,11 @@
+<import src="../movie/movie-template.wxml" />
+<import src="../index-movie/index-movie.wxml" />
+<template name="movieListTemplate">
+  <view class="movie-list-container">
+    <view class="inner-container">
+      <block wx:for="{{movies}}" wx:for-item="movie" wx:key="index">
+        <template is="movieTemplate" data="{{...movie ,index:index+1}}"/>
+      </block>
+    </view>
+  </view>
+</template>

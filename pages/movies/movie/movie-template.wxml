@@ -1,0 +1,39 @@
+<import src="../stars/stars-template.wxml" />
+<template name="movieTemplate">
+  <view class="movie-container" catchtap="onMovieTap" data-id="{{id}}">
+    <view class="item">
+      <view class="info">
+        <view>
+          <em class="em">{{index}}</em>
+        </view>
+        <view class="pic">
+          <image class="img" src="{{images}}"></image>
+        </view>
+        <view class="right_info">
+          <view>
+            <view>
+              <text class="title" style="color:#369">{{title}}</text>
+            </view>
+            <view style="font-size:10pt;font-weight:bold;margin:10rpx 0rpx;">
+              <view>
+                <text class="title">导演:{{director}} </text>
+                <text class="title">主演:{{starring}}</text>
+              </view>
+              <view>
+                <text class="title">{{year}}/{{countries}}   {{genres}}</text>
+              </view>
+              <view>
+                  <template is="starsTemplate" data="{{stars:db_score/2,db_score}}" /> 
+              </view>
+              <view class="quote">
+                <text class="inq">"{{film_review}}"</text>
+              </view>
+            </view>
+            <view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

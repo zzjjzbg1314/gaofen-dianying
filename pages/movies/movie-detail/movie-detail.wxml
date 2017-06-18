@@ -1,0 +1,132 @@
+<import src="../stars/stars-template.wxml" />
+<view class="container" class="hidden {{visible?'visible':''}}">
+  <image class="background-img" src="{{movieDetail.tMovie.images}}" mode="aspectFill" />
+  <view class="info">
+    <view class="pic">
+      <image class="img" src="{{movieDetail.tMovie.images}}"></image>
+    </view>
+    <view class="right_info">
+      <view>
+        <view>
+          <text class="title_name" style="color:#FFFFFF;font-size:42rpx;">{{movieDetail.tMovie.title}}</text>
+        </view>
+        <view style="font-size:10pt;font-weight:bold;margin:10rpx 0rpx;">
+          <view>
+            <text class="title">导演:{{movieDetail.tMovie.director}} </text>
+            <text class="title">主演:{{movieDetail.tMovie.starring}}</text>
+          </view>
+          <view>
+            <text class="title">制片国家/地区:{{movieDetail.tMovie.countries}}</text>
+          </view>
+          <view>
+            <text class="title">上映日期:{{movieDetail.tMovie.year}}</text>
+          </view>
+          <view>
+            <text class="title">类型:{{movieDetail.tMovie.genres}}</text>
+          </view>
+          <view class="top_content">
+            <view>
+              <text>评分:{{movieDetail.tMovie.db_score}}</text>
+            </view>
+            <view class="star_bg">
+              <view class="star_over" style="width:{{movieDetail.tMovie.db_stars * 2 }}rpx"></view>
+            </view>
+          </view>
+        </view>
+        <view>
+        </view>
+      </view>
+    </view>
+  </view>
+ <!-- <view class="form_middle">
+    <form bindsubmit="sendBdyInfoSubmit" report-submit="true">
+      <view class="btn-area">
+        <button formType="submit"  class="send_bdy_button">点击获取百度云信息</button>
+      </view>
+    </form>
+  </view>-->
+
+  <!-- 剧情简介-->
+  <view class="middle">
+    <view>
+      <text class='title_split'>剧情简介</text>
+    </view>
+    <view class="detail">
+      <text class="title_small">
+        {{movieDetail.tMovie.summary}}
+      </text>
+    </view>
+  </view>
+
+  <!--影人信息 -->
+  <view class="middle">
+    <view>
+      <text class='title_split'>演职人员</text>
+    </view>
+    <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+      <block wx:for="{{movieDetail.movieStarsList}}" wx:for-item="star" wx:key="index">
+        <view class="scroll_item_x">
+          <view>
+            <image class="stars_img" src="{{star.pic_url}}"></image>
+          </view>
+          <view>
+            <text class="title_small">{{star.star_name}}</text>
+          </view>
+          <view>
+            <text class="title_small_role">{{star.role_name}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!--剧照 -->
+  <view class="middle">
+    <view>
+      <text class='title_split'>剧照</text>
+    </view>
+    <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+      <block wx:for="{{movieDetail.moviePhotoses}}" wx:for-item="photo" wx:key="index">
+        <view class="scroll_item_x">
+          <view>
+            <image class="photos_img" src="{{photo.pic_url}}"></image>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!-- 评论-->
+  <view class="middle">
+    <view>
+      <text class='title_split'>观众评论</text>
+    </view>
+    <scroll-view scroll-y="true" style="display: flex">
+      <block wx:for="{{movieDetail.movieCommentses}}" wx:for-item="comment" wx:key="index">
+        <view class="comment">
+          <view class="avatar">
+            <image class="avatar_img" src="{{comment.pic_url}}"></image>
+          </view>
+          <view class="content">
+            <view class="top_content" style="color: #369; font: 20rpx/150% Arial, Helvetica, sans-serif;">
+              <view>
+                <text>{{comment.comment_name}} </text>
+              </view>
+              <view class="star_bg">
+                <view class="star_over" style="width:{{comment.db_score * 2 }}rpx"></view>
+              </view>
+            </view>
+            <view class="comment_contents">
+              <text class="comment_contents">"{{comment.comment_contents}}"</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+
+  <!--微信会话-->
+
+
+</view>

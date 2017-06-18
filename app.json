@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/movies/movies",
+    "pages/movies/movie-detail/movie-detail",
+    "pages/movies/more-movie/more-movie"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1b315e"
+  },
+  "tabBar": {
+    "backgroundColor": "#1b315e",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon/film_normal.png",
+        "selectedIconPath": "/images/icon/film_selected.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "找电影",
+        "iconPath": "/images/icon/film_normal.png",
+        "selectedIconPath": "/images/icon/film_selected.png"
+      },
+      {
+        "pagePath": "pagePath",
+        "text": "通知",
+        "iconPath": "/images/icon/cinema_normal.png",
+        "selectedIconPath": "/images/icon/cinema_selected.png"
+      }
+    ]
+  }
+}

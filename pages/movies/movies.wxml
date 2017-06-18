@@ -1,0 +1,27 @@
+<import src="movie-list/movie-list-template.wxml" />
+<import src="movie-grid/movie-grid-template.wxml" />
+<import src="more-movie/more-movie.wxml" />
+
+<view class="container" wx:if="{{containerShow}}">
+  <view class="topmain">
+    <view class="toptip">分类浏览</view>
+    <view class="typestyle">
+      <view class="flexitem" wx:for="{{type1['type1']}}" wx:for-item="type" wx:key="index" catchtap="selectMovieTap"  data-desc="{{type.desc}}" data-id="{{type.typeId}}">
+        <view class="desc">{{type.desc}}</view>
+      </view>
+    </view>
+    <view class="typestyle">
+      <view class="flexitem" wx:for="{{type2['type2']}}" wx:for-item="type" wx:key="index" catchtap="selectMovieTap" data-id="{{type.typeId}}" data-desc="{{type.desc}}" >
+        <view class="desc">{{type.desc}}</view>
+      </view>
+    </view>
+    <view class="typestyle">
+      <view class="flexitem" wx:for="{{type3['type3']}}" wx:for-item="type" wx:key="index" catchtap="selectMovieTap" data-id="{{type.typeId}}" data-desc="{{type.desc}}">
+        <view class="desc">{{type.desc}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...allMyMovies}}" />
+  </view>
+</view>
