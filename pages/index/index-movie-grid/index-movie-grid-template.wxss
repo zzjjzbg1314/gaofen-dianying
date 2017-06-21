@@ -1,4 +1,4 @@
-@import "../movie/movie-template.wxss";
+@import "../index-movie-origin/index-movie-origin-template.wxss";
 
 /*scroll-view*/
 .single-view-container{
@@ -7,6 +7,6 @@
 }
 
 .grid-container{
-    height: 1300rpx;
+    height: 350rpx;
     margin:40rpx 0 40rpx 6rpx;
 }

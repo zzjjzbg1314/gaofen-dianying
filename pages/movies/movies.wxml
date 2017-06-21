@@ -1,6 +1,7 @@
 <import src="movie-list/movie-list-template.wxml" />
 <import src="movie-grid/movie-grid-template.wxml" />
 <import src="more-movie/more-movie.wxml" />
+<loading hidden="{{hiddenLoading}}">数据正在加载</loading>
 
 <view class="container" wx:if="{{containerShow}}">
   <view class="topmain">

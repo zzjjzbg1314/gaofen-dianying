@@ -20,6 +20,8 @@ function http(url, callBack) {
       "Content-Type": "json"
     },
     success: function (res) {
+      console.log(res.data.subjects[0].images.medium)
+      console.log(res.data.subjects[0])
       callBack(res.data);
     },
     fail: function (error) {

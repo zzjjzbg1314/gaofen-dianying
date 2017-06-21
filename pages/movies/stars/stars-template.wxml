@@ -1,11 +1,13 @@
 <template name="starsTemplate">
   <view class="stars-container">
     评分:
+   <view class="stars-container">
     <view class="stars">
-      <block wx:for="{{stars}}" wx:for-item="i" wx:key="index">
-        <image  src="/images/icon/star.png"></image>
-      </block>
+      <view class="star_bg">
+        <view class="star_over" style="width:{{stars * 2 }}rpx"></view>
+      </view>
+      <text class="star-score">{{score}}</text>
     </view>
-    <text class="star-score">{{db_score}}</text>
-  </view>
+</view>
+</view>
 </template>

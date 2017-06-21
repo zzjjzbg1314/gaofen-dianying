@@ -1,0 +1,10 @@
+<template name="starsTemplate">
+  <view class="stars-container">
+    <view class="stars">
+      <view class="star_bg">
+        <view class="star_over" style="width:{{stars * 2 }}rpx"></view>
+      </view>
+      <text class="star-score">{{score}}</text>
+    </view>
+</view>
+</template>

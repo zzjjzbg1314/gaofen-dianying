@@ -3,6 +3,7 @@ App({
     g_isPlayingMusic: false,
     g_currentMusicPostId: null,
     doubanBase: "https://api.douban.com",
+    dianyingBase:"https://www.top-dytt.cn/dianying/"
   },
   onLaunch: function () {
     this.getUserDataToken();
@@ -28,7 +29,6 @@ App({
               withCredentials:true,
               success: function (res_user_info) {
                 //获取用户敏感数据密文和偏移向量
-                //console.log(res_user_info.encryptedData)
                 var encryptedData = res_user_info.encryptedData;
                var  iv = res_user_info.iv;
                 wx.request({
@@ -43,7 +43,7 @@ App({
                     console.log(res_decodeUserInfo)
                   },
                   success: function (res_decodeUserInfo){
-                    console.log(res_decodeUserInfo)
+                    //console.log(res_decodeUserInfo)
                   }
                 })
               }

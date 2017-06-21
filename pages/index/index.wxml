@@ -1,3 +1,45 @@
+<import src="index-list/index-list-template.wxml" />
 <view>
-helloworld
+  <view class="welcome-list-container">
+    <loading hidden="{{hiddenLoading}}">数据正在加载</loading>
+
+    <!--首页滚动-->
+    <view>
+      <swiper autoplay="true" class="welcome-swiper">
+        <swiper-item>
+          <image src="https://img1.doubanio.com/view/photo/raw/public/p2460139288.jpg" class="swiper-img"> </image>
+        </swiper-item>
+        <swiper-item>
+          <image src="https://img3.doubanio.com/view/photo/raw/public/p2432519971.jpg" class="swiper-img"> </image>
+        </swiper-item>
+        <swiper-item>
+          <image src="https://img3.doubanio.com/view/photo/raw/public/p2456978676.jpg" class="swiper-img"> </image>
+        </swiper-item>
+        <swiper-item>
+          <image src="https://img3.doubanio.com/view/photo/raw/public/p2458455603.jpg" class="swiper-img"> </image>
+        </swiper-item>
+        <swiper-item>
+          <image src="https://img1.doubanio.com/view/photo/raw/public/p2461805699.jpg" class="swiper-img"> </image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+
+  <!--最近热门-->
+  <view class="index-movies-container">
+
+
+    <view class="indexListTemplate">
+      <template is="indexListTemplate" data="{{...hotmovies_2017}}" />
+    </view>
+
+    <view class="indexListTemplate">
+      <template is="indexListTemplate" data="{{...hotmovies_2016}}" />
+    </view>
+
+    <view class="indexListTemplate">
+      <template is="indexListTemplate" data="{{...hotmovies_douban_top}}" />
+    </view>
+  </view>
+
 </view>

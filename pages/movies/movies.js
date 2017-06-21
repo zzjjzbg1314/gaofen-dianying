@@ -14,6 +14,8 @@ Page({
     searchResult: {},
     containerShow: true,
     searchPanelShow: false,
+    hiddenLoading: false
+
   },
   onShareAppMessage: function () {
     return {
@@ -128,7 +130,9 @@ Page({
           type3: type3
         }
         that.setData(readyType);
-
+        that.setData({
+          hiddenLoading: true
+        })
         wx.hideNavigationBarLoading();
       },
       fail: function (error) {
@@ -138,12 +142,7 @@ Page({
 
   },
 
-  onMoreTap: function (event) {
-    var category = event.currentTarget.dataset.category;
-    wx.navigateTo({
-      url: "more-movie/more-movie?category=" + category
-    })
-  },
+  
 
   onMovieTap: function (event) {
     var movieId = event.currentTarget.dataset.id;

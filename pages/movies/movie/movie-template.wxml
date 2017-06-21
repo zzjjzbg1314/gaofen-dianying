@@ -23,7 +23,7 @@
                 <text class="title">{{year}}/{{countries}}   {{genres}}</text>
               </view>
               <view>
-                  <template is="starsTemplate" data="{{stars:db_score/2,db_score}}" /> 
+                  <template is="starsTemplate" data="{{stars:db_stars ,score: db_score}}" /> 
               </view>
               <view class="quote">
                 <text class="inq">"{{film_review}}"</text>

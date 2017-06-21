@@ -1,0 +1,18 @@
+@import "index-list/index-list-template.wxss";
+
+.scroll-x-css {
+  white-space: nowrap;
+  overflow: hidden;
+ scroll-behavior:auto ;
+}
+
+.scroll-x {
+  width: 100%;
+  display: inline-block;
+}
+
+.swiper-img {
+  height: 320rpx;
+  width: 100%;
+}
+
