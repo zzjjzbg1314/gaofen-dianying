@@ -1,0 +1,7 @@
+<view class="grid-container">
+  <block wx:for="{{imgalist}}" wx:for-item="image">
+    <view class="single-view-container">
+      <image src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+    </view>
+  </block>
+</view>

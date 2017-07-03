@@ -9,13 +9,14 @@
 .info .pic {
   color: #bbb;
   float: left;
-  padding-right: 18rpx;
+  padding-right: 6rpx;
   margin: 30rpx 10rpx;
 }
 
 .pic .img {
-  width: 220rpx;
-  height: 325rpx;
+  width: 250rpx;
+  height: 330rpx;
+  margin: 30rpx 5rpx;
   padding-bottom: 20rpx;
   padding-right: 10rpx;
 }
@@ -28,7 +29,7 @@
 
 .info {
   width: 100%;
-  height: 400rpx;
+  height: 350rpx;
   position: absolute;
   top: 0;
   left: 0;
@@ -38,9 +39,9 @@
 
 .background-img {
   width: 100%;
-  height: 380rpx;
+  height: 350rpx;
   -webkit-filter: blur(40rpx);
-  /*-webkit-filter:brightness(0.3);*/
+  -webkit-filter:brightness(0.3);
   -ms-filter: blur(6px);
   -moz-filter: blur(6px);
 }
@@ -58,8 +59,35 @@
   padding: 1rpx 20rpx;
 }
 
+.slogan {
+  font-size: 24rpx;
+  color: #1f4ba5;
+}
+
+.more {
+  float: right;
+}
+
+.more-text {
+  font-size: 24rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+  color: #1f4ba5;
+}
+
+.more-img {
+  width: 9rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}
+
 .middle {
-  border-bottom: 6rpx double #ccc;
+  border-bottom: 8rpx outset #99CCFF;
+  margin: 50rpx 5rpx 1rpx 5rpx;
+}
+.middle_1 {
+  border-bottom: 8rpx outset #99CCFF;
+  margin: 5rpx 5rpx 1rpx 5rpx;
 }
 
 .title_split {
@@ -68,7 +96,7 @@
 }
 
 .title_small {
-  font: 20rpx/150% Arial, Helvetica, sans-serif;
+  font: 25rpx/150% Arial, Helvetica, sans-serif;
 }
 
 .title_small_role {
@@ -88,7 +116,7 @@
 }
 
 .photos_img {
-  width: 195rpx;
+  width: 225rpx;
   height: 175rpx;
   margin: 20rpx 10rpx;
 }
@@ -99,7 +127,7 @@
 
 .middle_stars {
   border-bottom: 6rpx double #ccc;
-  margin: 20rpx 0rpx;
+  margin:1rpx 0rpx;
 }
 
 .comment {
@@ -121,8 +149,8 @@
 }
 
 .comment_contents {
-  font: 20rpx/150% Arial, Helvetica, sans-serif;
-  padding: 0rpx 100rpx 1rpx 1rpx;
+  font: 25rpx/150% Arial, Helvetica, sans-serif;
+  padding: 0rpx 10rpx 1rpx 1rpx;
 }
 
 .content {

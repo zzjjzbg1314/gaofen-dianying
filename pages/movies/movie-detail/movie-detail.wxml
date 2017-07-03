@@ -1,6 +1,6 @@
 <import src="../stars/stars-template.wxml" />
 <view class="container" class="hidden {{visible?'visible':''}}">
-  <image class="background-img" src="{{movieDetail.tMovie.images}}" mode="aspectFill" />
+  <image class="background-img" src="{{movieDetail.tMovie.images}}" mode="left"/>
   <view class="info">
     <view class="pic">
       <image class="img" src="{{movieDetail.tMovie.images}}"></image>
@@ -8,25 +8,25 @@
     <view class="right_info">
       <view>
         <view>
-          <text class="title_name" style="color:#FFFFFF;font-size:42rpx;">{{movieDetail.tMovie.title}}</text>
+          <text class="title_name" style="color:#FFFFF0;font-size:42rpx;">{{movieDetail.tMovie.title}}</text>
         </view>
-        <view style="font-size:10pt;font-weight:bold;margin:10rpx 0rpx;">
+        <view style="color:#FFFFF0;margin:5rpx 0rpx;">
+        <view>
+            <text class="title">导演:{{movieDetail.tMovie.director}}</text>
+          </view>
           <view>
-            <text class="title">导演:{{movieDetail.tMovie.director}} </text>
             <text class="title">主演:{{movieDetail.tMovie.starring}}</text>
           </view>
           <view>
-            <text class="title">制片国家/地区:{{movieDetail.tMovie.countries}}</text>
+            <text class="title">制片国家/地区:{{movieDetail.tMovie.countries}} / {{movieDetail.tMovie.year}}</text>
           </view>
-          <view>
-            <text class="title">上映日期:{{movieDetail.tMovie.year}}</text>
-          </view>
+          
           <view>
             <text class="title">类型:{{movieDetail.tMovie.genres}}</text>
           </view>
           <view class="top_content">
             <view>
-              <text>评分:{{movieDetail.tMovie.db_score}}</text>
+              <text  class="title">评分:{{movieDetail.tMovie.db_score}}</text>
             </view>
             <view class="star_bg">
               <view class="star_over" style="width:{{movieDetail.tMovie.db_stars * 2 }}rpx"></view>
@@ -38,13 +38,6 @@
       </view>
     </view>
   </view>
- <!-- <view class="form_middle">
-    <form bindsubmit="sendBdyInfoSubmit" report-submit="true">
-      <view class="btn-area">
-        <button formType="submit"  class="send_bdy_button">点击获取百度云信息</button>
-      </view>
-    </form>
-  </view>-->
 
   <!-- 剧情简介-->
   <view class="middle">
@@ -59,7 +52,7 @@
   </view>
 
   <!--影人信息 -->
-  <view class="middle">
+  <view class="middle_1">
     <view>
       <text class='title_split'>演职人员</text>
     </view>
@@ -81,15 +74,21 @@
   </view>
 
   <!--剧照 -->
-  <view class="middle">
-    <view>
-      <text class='title_split'>剧照</text>
-    </view>
+  <view class="middle_1">
+    <view class="movie-head">
+        <text class="slogan">剧照图片</text>
+         <view catchtap="onMoreTap" class="more" data-movieid="{{movieDetail.tMovie.id}}">
+          <text class="more-text">更多</text>
+          <image class="more-img" src="/images/icon/arrow-right.png"></image>
+        </view>
+      </view>
+
+
     <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
       <block wx:for="{{movieDetail.moviePhotoses}}" wx:for-item="photo" wx:key="index">
         <view class="scroll_item_x">
           <view>
-            <image class="photos_img" src="{{photo.pic_url}}"></image>
+            <image class="photos_img" src="{{photo.pic_url}}" bindtap="previewImage"></image>
           </view>
         </view>
       </block>
@@ -97,7 +96,7 @@
   </view>
 
   <!-- 评论-->
-  <view class="middle">
+  <view class="middle_1">
     <view>
       <text class='title_split'>观众评论</text>
     </view>
@@ -108,7 +107,7 @@
             <image class="avatar_img" src="{{comment.pic_url}}"></image>
           </view>
           <view class="content">
-            <view class="top_content" style="color: #369; font: 20rpx/150% Arial, Helvetica, sans-serif;">
+            <view class="top_content" style="color: #369; font: 25rpx/150% Arial, Helvetica, sans-serif;">
               <view>
                 <text>{{comment.comment_name}} </text>
               </view>
